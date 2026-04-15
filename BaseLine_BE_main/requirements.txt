@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+psycopg2-binary
+python-dotenv
+pydantic
+google-cloud-aiplatform
+google-adk
+supabase
+websockets
+google-auth
+requests

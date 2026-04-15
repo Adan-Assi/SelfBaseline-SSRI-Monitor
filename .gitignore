@@ -1,0 +1,41 @@
+# --- Project Specifics ---
+# Exclude the large data/model files usually found in Algo folders
+*.h5
+*.pth
+*.csv
+*.json
+*.parquet
+*.zip
+
+# --- Backend & Algorithm (Python) ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+*.log
+
+# --- Frontend (Node/React/Vue) ---
+node_modules/
+dist/
+build/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Compiled C++/Object Files (The extraction error culprits) ---
+*.o
+*.obj
+*.d
+*.out
+*.exe
+# This targets that specific deep folder issue
+**/ComponentDescriptors.*
+
+# --- OS & IDE Junk ---
+.DS_Store
+.vscode/
+.idea/
+.ipynb_checkpoints/
