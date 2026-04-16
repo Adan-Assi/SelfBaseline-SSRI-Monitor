@@ -70,4 +70,25 @@ To run the full system, you will need to configure each module individually. Ple
 ---
 
 ## 👥 Contributors
+
 *Developed as a collaborative project to innovate early SSRI monitoring.*
+
+### **Engineering Team**
+* **Adan Assi** – Software Engineer
+* **Liel Weinfeld** – Software Engineer
+* **Boaz Schiff** – Software Engineer
+* **Ori Hodorov** – Software Engineer
+* **Dor Ivanir** – Software Engineer
+
+### **Product & Design**
+* **Or Yehezkel** – Product Designer
+* **Oryan Hager Schiff** – Product Designer
+
+### **Business & Strategy (Global MBA)**
+* **Joshua Azoulay**
+* **Serge Volodarski**
+* **Yelyzaveta Liashenko**
+
+---
+
+*Developed as part of the **Workshop On E-Commerce Applications** at Tel Aviv University (TAU).*
