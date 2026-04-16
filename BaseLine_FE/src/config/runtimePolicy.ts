@@ -13,7 +13,7 @@ function buildRuntimePolicy(mode: DataMode): RuntimePolicy {
   return {
     mode,
     useBackend: mode !== "mock",
-    allowFallback: mode === "partial",
+    allowFallback: mode === "mock" || mode === "partial", // Allow fallback for mock and partial modes
   };
 }
 

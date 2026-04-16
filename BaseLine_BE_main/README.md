@@ -10,39 +10,36 @@ A high-performance FastAPI backend supporting a mental-health ecosystem. Feature
 
 ## 🚀 Quick Start
 
-### Prerequisites
-* Python 3.10+
-* [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) (authenticated)
-* Supabase Account & Project
+> **Note:** This server is required only if the Frontend is set to `partial` or `real` mode.
 
-### Installation
 1. **Clone & Setup**
-    ```bash
-    git clone [https://github.com/Dorivanirtau/MentalHealthBE.git](https://github.com/Dorivanirtau/MentalHealthBE.git)
-    cd MentalHealthBE
-    python -m venv venv
-    source venv/bin/activate  # Windows: .\venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
+   ```be-setup
+   cd BaseLine_BE_main
+   python -m venv venv
+   source venv/bin/activate  # Windows: .\venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-2.  **Environment Configuration**
-    Create a `.env` file in the root:
+2. **Environment Configuration**
+   Create a `.env` file **inside the `BaseLine_BE_main` directory**. These keys are required for AI and Database features to initialize.
 
-    ```env
-    SUPABASE_URL=your_url
-    SUPABASE_KEY=your_key
-    GOOGLE_CLOUD_PROJECT=your_project_id
-    ```
+   ```be-env
+   # Database: From Supabase Project Settings > API
+   SUPABASE_URL=your_supabase_url
+   SUPABASE_KEY=your_service_role_key
 
-3.  **Run Server**
+   # AI: From Google Cloud Console
+   GOOGLE_CLOUD_PROJECT=your_gcp_project_id
+   ```
 
-    ```bash
-    uvicorn main:app --reload --port 8000
-    ```
+3. **Run Server**
+   ```be-run
+   # --host 0.0.0.0 is required for the mobile app to connect over Wi-Fi
+   uvicorn main:app --reload --host 0.0.0.0 --port 8000
+   ```
+   *Verify connectivity at: `http://localhost:8000/docs`*
 
-    *Access API Docs at: [http://localhost:8000/docs](https://www.google.com/search?q=http://localhost:8000/docs)*
-
------
+---
 
 ## 🛠️ Core Capabilities
 

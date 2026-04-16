@@ -10,31 +10,35 @@ The mobile frontend for the Mental Health ecosystem, enabling patients to perfor
 
 ## 🚀 Getting Started
 
-### Prerequisites
-* **Node.js**: v18 or higher
-* **Expo Go**: Downloaded on your iOS/Android device
-* **Watchman**: (Recommended for macOS users)
-
-### Installation
 1. **Clone & Install**
-   ```bash
+   ```fe-setup
    cd BaseLine_FE
    npm install
    ```
 
-2.  **Environment Setup**
-    Create a `.env` file in the root directory:
+2. **Environment Configuration**
 
-    ```env
-    EXPO_PUBLIC_API_URL=http://your-computer-ip:8000
-    EXPO_PUBLIC_APP_MODE=mock  # Options: mock, partial, real
-    ```
+   Create a `.env` file **inside the `BaseLine_FE` directory**. The `APP_MODE` you choose here determines if you need to set up the Backend.
 
-3.  **Start the App**
+   ```fe-env
+   # Find your local IP via 'ipconfig' (Windows) or 'ifconfig' (Mac)
+   EXPO_PUBLIC_API_URL=http://192.168.x.x:8000
+   
+   # Modes: 
+   # 'mock'    -> No Backend needed (uses local JSON).
+   # 'partial' -> Backend suggested (local login, but attempts real Voice/Sensors).
+   # 'real'    -> Backend REQUIRED (real login, DB, and Voice).
+   EXPO_PUBLIC_APP_MODE=mock 
+   ```
 
-    ```bash
-    npx expo start
-    ```
+3. **Dependency Check**
+   * **Using `mock`?** Skip the Backend setup and go to Step 4.
+   * **Using `partial` or `real`?** You **MUST** now follow the [Backend Quick Start](../BaseLine_BE_main/README.md) instructions to launch the FastAPI server.
+
+4. **Launch**
+   ```fe-run
+   npx expo start --clear
+   ```
 
     *Scan the QR code with your phone's camera (iOS) or Expo Go app (Android).*
 

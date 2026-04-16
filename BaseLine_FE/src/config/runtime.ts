@@ -12,14 +12,16 @@ function readExtra<T = any>(key: string): T | undefined {
 //   partial  → backend preferred + local fallbacks when needed
 //   mock     → fully mocked data, no backend calls
 export const DATA_MODE: DataMode = (() => {
-  const raw = String(readExtra("dataMode") ?? "real").toLowerCase();
+  // Look at the .env variable first, then fallback to the old way
+  const raw = (process.env.EXPO_PUBLIC_APP_MODE || readExtra("dataMode") || "real").toLowerCase();
 
   if (raw === "mock" || raw === "partial" || raw === "real") {
-    return raw;
+    return raw as DataMode;
   }
-
   return "real";
 })();
+
+
 
 export const DEBUG_LOGS: boolean = Boolean(readExtra("debugLogs"));
 
