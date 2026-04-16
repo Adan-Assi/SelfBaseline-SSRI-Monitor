@@ -1,9 +1,25 @@
 # SelfBaseline: Early Signal Detection for SSRI Monitoring
 
-## 🌟 Project Vision
+## 🌟 Project Vision & Motivation
+
+### The Concept
 **SelfBaseline** is a digital health system designed to detect early behavioral and physiological deviations from an individual’s own baseline following the initiation of SSRIs (Selective Serotonin Reuptake Inhibitors). 
 
-Unlike traditional systems that compare patients to population norms, our framework models **change-from-self**. We use passive digital signals—specifically sleep, activity, and phone use patterns—to surface subtle "deviation flags" during the critical first 4 weeks of medication, supporting clinical assessment and shared decision-making.
+Unlike traditional systems that compare patients to population norms, our framework models **change-from-self**. We use passive digital signals—specifically sleep, activity, and phone use patterns—to surface subtle "deviation flags" during the critical first 4 weeks of medication.
+
+---
+
+### 💡 Why SelfBaseline?
+
+#### 1. Theme: The Future of Health
+This project was developed under the theme of **"The Future of Health",** moving away from reactive "sick-care" toward proactive, data-driven monitoring. We envision a world where clinicians don't have to wait for a follow-up appointment to see how a patient is reacting to a new prescription.
+
+#### 2. The Practical Monitoring Challenge
+Our motivation stems from the **Early SSRI Risk Window**. Clinical decisions often need to be made as soon as possible based on limited, noisy data. This creates a difficult trade-off:
+* **Acting too early:** Risking a false alarm based on unstable or noisy signals.
+* **Waiting too long:** Delaying a necessary intervention during a vulnerable period.
+
+**SelfBaseline** aims to bridge this gap by providing an objective, continuous data layer that supports faster, more confident shared decision-making between doctors and patients.
 
 ---
 
